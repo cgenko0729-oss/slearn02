@@ -8,6 +8,14 @@ public class GameManager : Singleton<GameManager>
     public int targetFrameRate = 60;
     public bool isPaused = false;
 
+    public PlayerControllerTest playerController;
+
+    public void RegisterPlayer(PlayerControllerTest player)
+    {
+        playerController = player;
+        Debug.Log($"[GameManager] Player registered: {player.gameObject.name}");
+    }
+
     void Start()
     {
        
