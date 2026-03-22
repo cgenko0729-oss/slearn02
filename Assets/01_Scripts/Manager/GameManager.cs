@@ -12,6 +12,11 @@ public class GameManager : Singleton<GameManager>
 
     public HealthSystem playerHealth;
 
+    public enum GameMode { SinglePlayer, CoopStory, PvPArena, Sandbox }
+    [Header("Game Mode")]
+    public GameMode currentMode = GameMode.SinglePlayer;
+    public int maxPlayersForMode = 1;
+
     public void OnPlayerDeath()
     {
         Debug.Log("[GameManager] Player has died! Showing game over...");
