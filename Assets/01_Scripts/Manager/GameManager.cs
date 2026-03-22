@@ -12,6 +12,12 @@ public class GameManager : Singleton<GameManager>
 
     public HealthSystem playerHealth;
 
+
+    public enum Difficulty { Easy, Normal, Hard, Nightmare }
+    [Header("Difficulty")]
+    public Difficulty currentDifficulty = Difficulty.Normal;
+    public float difficultyMultiplier = 1.0f;
+
     public void OnPlayerDeath()
     {
         Debug.Log("[GameManager] Player has died! Showing game over...");
