@@ -17,6 +17,10 @@ public class GameManager : Singleton<GameManager>
     [Header("Difficulty")]
     public Difficulty currentDifficulty = Difficulty.Normal;
     public float difficultyMultiplier = 1.0f;
+    public enum GameMode { SinglePlayer, CoopStory, PvPArena, Sandbox }
+    [Header("Game Mode")]
+    public GameMode currentMode = GameMode.SinglePlayer;
+    public int maxPlayersForMode = 1;
 
     public void OnPlayerDeath()
     {
