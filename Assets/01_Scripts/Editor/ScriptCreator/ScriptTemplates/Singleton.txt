@@ -1,0 +1,16 @@
+using UnityEngine;
+using System.Collections;
+
+public class #SCRIPTNAME# : Singleton<#SCRIPTNAME#>
+{   
+
+    void Start()
+    {
+       
+    }
+
+    void Update()
+    {
+        
+    }
+}
