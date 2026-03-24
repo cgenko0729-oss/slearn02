@@ -22,6 +22,9 @@ public class GameManager : Singleton<GameManager>
     public GameMode currentMode = GameMode.SinglePlayer;
     public int maxPlayersForMode = 1;
 
+    [Header("Combat")]
+    public WeaponSystem playerWeapon;
+
     public void OnPlayerDeath()
     {
         Debug.Log("[GameManager] Player has died! Showing game over...");
