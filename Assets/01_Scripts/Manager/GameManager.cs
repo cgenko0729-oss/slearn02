@@ -25,6 +25,8 @@ public class GameManager : Singleton<GameManager>
     [Header("Combat")]
     public WeaponSystem playerWeapon;
 
+    [SerializeField] private PauseMenu pauseMenu;
+
     public void OnPlayerDeath()
     {
         Debug.Log("[GameManager] Player has died! Showing game over...");
@@ -45,6 +47,14 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
-        
+        // For testing: Press P to toggle pause
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (!UIMenuManager.Instance.HasOpenMenu)
+            {
+                UIMenuManager.Instance.Push(pauseMenu);
+            }
+        }
+
     }
 }
